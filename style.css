@@ -48,30 +48,34 @@ nav a:hover {
   justify-content: center;
   font-size: 4em;
   color: white; 
+    position: sticky; 
+  top: 0; z-index: 1; 
   padding: 1em;
 }
 
-.mission { background-color: #f0f0f0; 
+.mission { background-color: white; 
   text-align: center;
   position: sticky; 
-  padding: 3rem;
   top: 0; z-index: 1; 
+  padding: 3rem;
 }
 
-.vision { background-color: #be1e2d; 
-  color: white; 
-}
-.logo { background-color: #f0f0f0; 
+.logo { background-color: white; 
   position: sticky; 
   top: 0; 
   z-index: 1; 
+  padding: 3rem;
 }
 
-.signage { background-color: #be1e2d; 
-  color: white; 
+.signage { background-color: white;
+    position: sticky; 
+  top: 0; z-index: 1; 
+  padding: 3rem;
+
 }
 
 /* footer */
 footer {
   text-align: center;
+  font-size: 10pt;
 }
