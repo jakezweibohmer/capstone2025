@@ -14,8 +14,18 @@ h2 {
   font-size: 2em;
 }
 
-header, footer {
-  background-color: #be1e2d;
+header {
+  margin-bottom: 5px;
+  background-color: #000;
+  color: white;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer {
+  background-color: #000;
   color: white;
   padding: 2rem;
   display: flex;
@@ -24,21 +34,32 @@ header, footer {
 }
 
 header img {
-  height: 90px;
+  height: 50px;
 }
 
 nav a {
   color: white;
   margin-left: 25px;
   text-decoration: none;
+
 }
 
 nav a:hover {
-  color: yellow;
+  color: #c49a6c;
+}
+
+.nav-logo {
+  height: 60px;
+  transition: transform 0.2s ease;
+}
+
+.nav-logo:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+
 }
 
 .mockups {
-  padding: 2rem;
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -53,8 +74,9 @@ nav a:hover {
   height: auto;
   width: 100%;
   object-fit: contain;
-  border-radius: 6px;
-  margin: 10px;
+  position: sticky; 
+  top: 0; z-index: 1; 
+  box-shadow: 0 1px 20px rgba(0,0,0,0.3);
 }
 
 .mockups p {
@@ -69,6 +91,37 @@ nav a:hover {
   margin-bottom: 3px;
 }
 
+.logo-standards {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: auto; 
+}
+
+.logo-standards img {
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+  object-fit: contain;
+  position: sticky; 
+  top: 0; z-index: 1; 
+  box-shadow: 0 1px 20px rgba(0,0,0,0.3);
+}
+
+.logo-standards p {
+  color:#be1e2d;
+  font-size: 10pt;
+  font-style: italic;
+  font-weight: bold;
+  text-align: left;
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 20px;
+  margin-bottom: 3px;
+}
 
 .section {
   height: 100vh;
