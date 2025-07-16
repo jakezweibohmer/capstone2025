@@ -22,13 +22,45 @@
   </header>
       <div class="logo-standards"> 
         <img src="images/TRT_LogoStandards_Page_1.jpg" alt="Logo Standards Intro page">
-        <img src="images/TRT_LogoStandards_Page_2.jpg" alt="History of the trail logo and simplified design">
-        <img src="images/TRT_LogoStandards_Page_3.jpg" alt="Explanation of the components of the new TRT logo">
-        <img src="images/TRT_LogoStandards_Page_4.jpg" alt="New TRT logo variations and gridded view of the construction of the logo">
-        <img src="images/TRT_LogoStandards_Page_5.jpg" alt="Typographic and Color standards for the new TRT logo">
+        <img src="images/TRT_LogoStandards_Page_2.jpg" alt="History of the trail logo and simplified design" class="enlargeable">
+        <img src="images/TRT_LogoStandards_Page_3.jpg" alt="Explanation of the components of the new TRT logo" class="enlargeable">
+        <img src="images/TRT_LogoStandards_Page_4.jpg" alt="New TRT logo variations and gridded view of the construction of the logo" class="enlargeable">
+        <img src="images/TRT_LogoStandards_Page_5.jpg" alt="Typographic and Color standards for the new TRT logo" class="enlargeable">
       </div> 
   <footer>
     &copy; Jacob Zweibohmer<br>Minneapolis College of Art and Design • Summer 2025
   </footer>
+    <div id="lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <img class="lightbox-content" id="lightbox-img">
+    </div>
+  <script>
+  // Get all enlargeable images
+  const images = document.querySelectorAll('.enlargeable');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const closeBtn = document.querySelector('.close');
+
+  // Add click event to each image
+  images.forEach(img => {
+    img.addEventListener('click', () => {
+      lightbox.style.display = 'block';
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+    });
+  });
+
+  // Close on X click
+  closeBtn.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+  });
+
+  // Close on background click (but not when clicking the image itself)
+  lightbox.addEventListener('click', (e) => {
+    if (e.target !== lightboxImg) {
+      lightbox.style.display = 'none';
+    }
+  });
+</script>
 </body>
 </html>

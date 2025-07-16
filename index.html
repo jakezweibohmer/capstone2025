@@ -29,5 +29,37 @@ and well-designed wayfinding signage system.</p></div>
   <footer>
     &copy; Jacob Zweibohmer<br>Minneapolis College of Art and Design • Summer 2025
   </footer>
+    <div id="lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <img class="lightbox-content" id="lightbox-img">
+    </div>
+  <script>
+  // Get all enlargeable images
+  const images = document.querySelectorAll('.enlargeable');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const closeBtn = document.querySelector('.close');
+
+  // Add click event to each image
+  images.forEach(img => {
+    img.addEventListener('click', () => {
+      lightbox.style.display = 'block';
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+    });
+  });
+
+  // Close on X click
+  closeBtn.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+  });
+
+  // Close on background click (but not when clicking the image itself)
+  lightbox.addEventListener('click', (e) => {
+    if (e.target !== lightboxImg) {
+      lightbox.style.display = 'none';
+    }
+  });
+</script>
 </body>
 </html>

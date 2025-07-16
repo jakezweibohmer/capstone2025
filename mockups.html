@@ -22,19 +22,51 @@
   </header>
       <div class="mockups"> 
         <img src="images/TRT_SystemsGuide_Mockups_Page_01.jpg" alt="Introduction page for the TRT Sign Mockups in Location on the Three Rivers Trail">
-        <img src="images/TRT_SystemsGuide_Mockups_Page_02.jpg" alt="Before image at Jerry Hatcher Road trail access">
-        <img src="images/TRT_SystemsGuide_Mockups_Page_03.jpg" alt="After image of wayfinding sign at Jerry Hatcher Road trail access">
-        <img src="images/TRT_SystemsGuide_Mockups_Page_04.jpg" alt="Before image at County K Road trail accesss">
-        <img src="images/TRT_SystemsGuide_Mockups_Page_05.jpg" alt="After image of wayfinding sign at County K Road trail access">
-        <img src="images/TRT_SystemsGuide_Mockups_Page_06.jpg" alt="Before image at Lone Tree Road trail access">
-        <img src="images/TRT_SystemsGuide_Mockups_Page_07.jpg" alt="After image of wayfinding sign at Lone Tree Road trail access">
-        <img src="images/TRT_SystemsGuide_Mockups_Page_08.jpg" alt="Mockups of Bridge signs on the Gotch State Park brige, East Fork of the Des Moines River bridge near Dakota City, and West Fork bridge near Bradgate">
-        <img src="images/TRT_SystemsGuide_Mockups_Page_09.jpg" alt="Mockup of Road signs at the Lone Tree Road trail and highway crossing, also showing decorative railroad tie installation on both sides of crossing">
-        <img src="images/TRT_SystemsGuide_Mockups_Page_10.jpg" alt="Mockup of Special intersection sign at Y intersection for short perpendicular trail segment in Humboldt">
+        <img src="images/TRT_SystemsGuide_Mockups_Page_02.jpg" alt="Before image at Jerry Hatcher Road trail access" class="enlargeable">
+        <img src="images/TRT_SystemsGuide_Mockups_Page_03.jpg" alt="After image of wayfinding sign at Jerry Hatcher Road trail access" class="enlargeable">
+        <img src="images/TRT_SystemsGuide_Mockups_Page_04.jpg" alt="Before image at County K Road trail accesss" class="enlargeable">
+        <img src="images/TRT_SystemsGuide_Mockups_Page_05.jpg" alt="After image of wayfinding sign at County K Road trail access" class="enlargeable">
+        <img src="images/TRT_SystemsGuide_Mockups_Page_06.jpg" alt="Before image at Lone Tree Road trail access" class="enlargeable">
+        <img src="images/TRT_SystemsGuide_Mockups_Page_07.jpg" alt="After image of wayfinding sign at Lone Tree Road trail access" class="enlargeable">
+        <img src="images/TRT_SystemsGuide_Mockups_Page_08.jpg" alt="Mockups of Bridge signs on the Gotch State Park brige, East Fork of the Des Moines River bridge near Dakota City, and West Fork bridge near Bradgate" class="enlargeable">
+        <img src="images/TRT_SystemsGuide_Mockups_Page_09.jpg" alt="Mockup of Road signs at the Lone Tree Road trail and highway crossing, also showing decorative railroad tie installation on both sides of crossing" class="enlargeable">
+        <img src="images/TRT_SystemsGuide_Mockups_Page_10.jpg" alt="Mockup of Special intersection sign at Y intersection for short perpendicular trail segment in Humboldt" class="enlargeable">
 
       </div> 
   <footer>
     &copy; Jacob Zweibohmer<br>Minneapolis College of Art and Design • Summer 2025
   </footer>
+  <div id="lightbox" class="lightbox">
+  <span class="close">&times;</span>
+  <img class="lightbox-content" id="lightbox-img">
+  </div>
+  <script>
+  // Get all enlargeable images
+  const images = document.querySelectorAll('.enlargeable');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const closeBtn = document.querySelector('.close');
+
+  // Add click event to each image
+  images.forEach(img => {
+    img.addEventListener('click', () => {
+      lightbox.style.display = 'block';
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+    });
+  });
+
+  // Close on X click
+  closeBtn.addEventListener('click', () => {
+    lightbox.style.display = 'none';
+  });
+
+  // Close on background click (but not when clicking the image itself)
+  lightbox.addEventListener('click', (e) => {
+    if (e.target !== lightboxImg) {
+      lightbox.style.display = 'none';
+    }
+  });
+</script>
 </body>
 </html>
