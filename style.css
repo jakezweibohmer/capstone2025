@@ -44,11 +44,14 @@ nav a {
   font-size: 0.8em;
   margin-left: 25px;
   text-decoration: none;
-
 }
 
 nav a:hover {
   color: #c49a6c;
+}
+
+nav a.active {
+  color: #00A790;
 }
 
 .nav-logo {
@@ -59,7 +62,6 @@ nav a:hover {
 .nav-logo:hover {
   transform: scale(1.05);
   cursor: pointer;
-
 }
 
 .mockups {
@@ -138,7 +140,8 @@ nav a:hover {
 }
 
 /* Alternating colors */
-.TRT { background-color: #be1e2d; 
+.TRT { 
+  background-color: #be1e2d; 
   font-style: italic;
   text-align: center;
   justify-content: center;
@@ -149,22 +152,25 @@ nav a:hover {
   padding: 0.5em;
 }
 
-.mission { background-color: white; 
+.mission { 
+  background-color: white; 
   text-align: center;
   position: sticky; 
   top: 0; z-index: 1; 
   padding: 3rem;
 }
 
-.logo { background-color: white; 
+.logo { 
+  background-color: white; 
   position: sticky; 
   top: 0; 
   z-index: 1; 
   padding: 3rem;
 }
 
-.signage { background-color: white;
-    position: sticky; 
+.signage { 
+  background-color: white;
+  position: sticky; 
   top: 0; z-index: 1; 
   padding: 3rem;
 
@@ -174,6 +180,6 @@ nav a:hover {
 footer {
   text-align: center;
   font-size: 10pt;
-    position: sticky; 
+  position: sticky; 
   top: 0; z-index: 1; 
 }
