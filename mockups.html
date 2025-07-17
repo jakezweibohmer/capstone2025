@@ -7,19 +7,21 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-<a href="index.html">
-  <img src="images/TRT_logo_white.png" alt="Three Rivers Trail Logo" class="nav-logo">
-</a>    
-    <nav>
-      <a href="index.html">TRT Signage Project</a>
-      <a href="logo.html">TRT Logo Standards</a>
-      <a href="signs.html">TRT Sign System</a>
-      <a href="mockups.html" class="active">Mockups</a>
-      <a href="process.html">Process</a>
-    </nav>
-    
-  </header>
+<header>
+  <a href="index.html">
+    <img src="images/TRT_logo_white.png" alt="Three Rivers Trail Logo" class="nav-logo">
+  </a>
+
+  <button class="menu-toggle" aria-label="Toggle menu">&#9776;</button> <!-- Hamburger icon -->
+
+  <nav class="nav-links">
+    <a href="index.html">TRT Signage Project</a>
+    <a href="logo.html">TRT Logo Standards</a>
+    <a href="signs.html">TRT Sign System</a>
+    <a href="mockups.html" class="active">Mockups</a>
+    <a href="process.html">Process</a>
+  </nav>
+</header>
       <div class="mockups"> 
         <img src="images/TRT_SystemsGuide_Mockups_Page_01.jpg" alt="Introduction page for the TRT Sign Mockups in Location on the Three Rivers Trail">
         <img src="images/TRT_SystemsGuide_Mockups_Page_02.jpg" alt="Before image at Jerry Hatcher Road trail access" class="enlargeable">
@@ -40,7 +42,7 @@
   <span class="close">&times;</span>
   <img class="lightbox-content" id="lightbox-img">
   </div>
-  <script>
+<script>
   // Get all enlargeable images
   const images = document.querySelectorAll('.enlargeable');
   const lightbox = document.getElementById('lightbox');
@@ -66,6 +68,13 @@
     if (e.target !== lightboxImg) {
       lightbox.style.display = 'none';
     }
+  });
+
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
   });
 </script>
 </body>
