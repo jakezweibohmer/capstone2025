@@ -50,6 +50,7 @@ nav a {
 nav.nav-links {
   display: flex;
   gap: 20px;
+  position: relative;
 }
 
 nav.nav-links a {
@@ -79,6 +80,7 @@ nav.nav-links a.active {
   border: none;
   cursor: pointer;
 }
+
 
 /* MOBILE NAVIGATION STYLES */
 @media (max-width: 820px) {
