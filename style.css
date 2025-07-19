@@ -1,5 +1,6 @@
 /* style.css */
 body {
+  background-color: white;
   margin: 0;
   font-family: "milibus", sans-serif;
   font-weight: 700;
@@ -107,38 +108,28 @@ nav.nav-links a.active {
 }
 
 
-/* MOCKUPS PAGE */
-.mockups {
+/* INTRO BLOCK IMAGE */
+.intro {
+  background-color: #be1e2d;
   box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  height: auto; 
+  height: 100%; 
 }
 
-.mockups img {
+.intro img {
+  position: sticky;
+  top: 0;
+  max-height: 100vh;
+  width: auto;
   max-width: 100%;
-  height: auto;
-  width: 100%;
-  object-fit: contain;
-  position: sticky; 
-  top: 110px; z-index: 1; 
-  box-shadow: 0 1px 20px rgba(0,0,0,0.3);
-}
-
-.mockups p {
-  color:#be1e2d;
-  font-size: 10pt;
-  font-style: italic;
-  font-weight: bold;
-  text-align: left;
-  width: 100%;
-  max-width: 1000px;
-  margin-top: 20px;
-  margin-bottom: 3px;
-}
+  margin: 0 auto;
+  display: block;
+  object-fit: contain; 
+  box-shadow: 0 -10px 20px -10px rgba(0, 0, 0, 0.4);}
 
 
 /* LOGOS PAGE */
@@ -149,18 +140,19 @@ nav.nav-links a.active {
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  height: auto; 
+  height: 100%; 
 }
 
 .logo-standards img {
+  position: sticky;
+  top: 0;
+  max-height: 100vh;
+  width: auto;
   max-width: 100%;
-  height: auto;
-  width: 100%;
-  object-fit: contain;
-  position: sticky; 
-  top: 110px; z-index: 1; 
-  box-shadow: 0 1px 20px rgba(0,0,0,0.3);
-}
+  margin: 0 auto;
+  display: block;
+  object-fit: contain; 
+  box-shadow: 0 -20px 20px -20px rgba(0, 0, 0, 0.3);}
 
 .logo-standards p {
   color:#be1e2d;
@@ -256,7 +248,8 @@ nav.nav-links a.active {
   display: block;
   max-width: 90%;
   max-height: 90%;
-  margin-top: 5%;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
 
 .close {
