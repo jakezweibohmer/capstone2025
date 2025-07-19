@@ -129,8 +129,7 @@ nav.nav-links a.active {
   margin: 0 auto;
   display: block;
   object-fit: contain; 
-  box-shadow: 0 -10px 20px -10px rgba(0, 0, 0, 0.4);}
-
+}
 
 /* LOGOS PAGE */
 .logo-standards {
@@ -152,7 +151,7 @@ nav.nav-links a.active {
   margin: 0 auto;
   display: block;
   object-fit: contain; 
-  box-shadow: 0 -20px 20px -20px rgba(0, 0, 0, 0.3);}
+  box-shadow: 0 -25px 20px -25px rgba(0, 0, 0, 0.3);}
 
 .logo-standards p {
   color:#be1e2d;
